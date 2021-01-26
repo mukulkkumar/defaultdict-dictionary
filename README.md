@@ -1,13 +1,15 @@
-## Specialized dictionaries
+## defaultdict
 
-In this section, we are going to look at other specialized types of dictionaries that the python standard library provides
+Defaultdict is a container like dictionaries present in the module collections. Defaultdict is a sub-class of the dict class that returns a dictionary-like object. The functionality of both dictionaries and defualtdict are almost same except for the fact that defaultdict never raises a KeyError. It provides a default value for the key that does not exists.
 
-1. defaultdict :- Automatic default values for "missing" keys.
+A defaultdict works exactly like a normal dict, but it is initialized with a function (“default factory”) that takes no arguments and provides the default value for a nonexistent key.
 
-2. OrderedDict :- Gauranteed key ordering (based on insertion order), plus some extras.
+A defaultdict will never raise a KeyError. Any key that does not exist gets the value returned by the default factory.
 
-3. Counter :- Specialized tools for dealing with counters.
+# Syntax: 
 
-4. ChainMap :- Efficient way of "combining" multiple dictionaries.
+defaultdict(default_factory)
 
-5. UserDict :- Alternative to subclassing dict for creating custom dictionary types.
+# Parameters:
+
+default_factory: A function returning the default value for the dictionary defined. If this argument is absent then the dictionary raises a KeyError. 
